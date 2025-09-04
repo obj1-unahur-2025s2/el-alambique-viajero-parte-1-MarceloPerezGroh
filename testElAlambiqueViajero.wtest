@@ -1,0 +1,23 @@
+import elAlambiqueViajero.*
+
+test "Luke visita París y guarda el recuerdo" {
+  alambiqueVeloz.visitar(paris)
+  assert.equals(1, luke.cantidadLugares())
+  assert.equals("llavero de la torre eiffel", luke.recuerdoActual())
+}
+
+test "Luke visita Buenos Aires y guarda el recuerdo" {
+  alambiqueVeloz.visitar(buenosAires)
+  assert.equals(1, luke.cantidadLugares())
+  assert.equals("mate", luke.recuerdoActual())
+}
+
+test "Luke puede visitar Bagdad siempre" {
+  alambiqueVeloz.visitar(bagdad)
+  assert.equals("petróleo crudo", luke.recuerdoActual())
+}
+
+test "Las Vegas homenajea a París" {
+  alambiqueVeloz.visitar(lasVegas)
+  assert.equals("llavero de la torre eiffel", luke.recuerdoActual())
+}
